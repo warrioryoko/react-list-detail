@@ -6,5 +6,6 @@ export const getCharacters = () => {
 
 export const getDetails = (characterId) => {
   return fetch(`https://last-airbender-api.herokuapp.com/api/v1/characters/${characterId}`)
-    .then(res => res.json());
-}
+    .then(res => res.json())
+    .catch(err => console.log('error', err));
+};
